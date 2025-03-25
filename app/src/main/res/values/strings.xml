@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FavFlix</string>
+    <string name="search_item_title">Search</string>
+    <string name="favorites_item_title">Favorites</string>
+    <string name="notifications_item_title">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clear_all_button_description">Clear All Button</string>
+    <string name="delete_button_description">Delete Button</string>
+</resources>

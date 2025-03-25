@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:id="@+id/lay_backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:rowCount="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/pelicula_item_backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:contentDescription="Redirects to the list of searchs"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <ImageButton
+            android:id="@+id/pelicula_item_movie_shrebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:contentDescription="Share the movie outside the app"
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+    </GridLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lay_backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pelicula_item_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pelicula_item_title"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/pelicula_item_img_shrebtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="1dp"
+                android:contentDescription="Share the movie poster outside the app"
+                app:layout_constraintBottom_toBottomOf="@id/pelicula_item_poster"
+                app:layout_constraintEnd_toEndOf="@id/pelicula_item_poster"
+                app:srcCompat="@android:drawable/ic_menu_share" />
+
+            <TextView
+                android:id="@+id/pelicula_item_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="(Title)"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/pelicula_item_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Year)"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="@id/pelicula_item_rating"
+                app:layout_constraintEnd_toEndOf="@id/pelicula_item_rating"/>
+
+            <TextView
+                android:id="@+id/pelicula_item_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="(Length)"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/pelicula_item_genre"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.541"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pelicula_item_title"
+                app:layout_constraintVertical_bias="0.243" />
+
+            <TextView
+                android:id="@+id/pelicula_item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.5"
+                android:textAlignment="center"
+                android:textSize="96sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pelicula_item_genre"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.955" />
+
+            <TextView
+                android:id="@+id/pelicula_item_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:text="(Genre)"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toEndOf="@id/pelicula_item_poster"
+                app:layout_constraintTop_toTopOf="@+id/pelicula_item_title"
+                app:layout_constraintVertical_bias="0.978" />
+
+            <ImageButton
+                android:id="@+id/pelicula_item_fav_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.352"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.346"
+                app:srcCompat="@drawable/baseline_favorite_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/pelicula_item_tag_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+    <TextView
+        android:id="@+id/pelicula_item_description"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:scrollbars="vertical"
+        android:maxLines="10"
+        android:ellipsize="none"
+        android:text="(Description)"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pelicula_item_tag_description" />
+
+    <TextView
+        android:id="@+id/pelicula_item_tag_director"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Director:"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pelicula_item_description" />
+
+    <ListView
+        android:id="@+id/pelicula_item_lv_director"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_item_tag_director" />
+
+    <TextView
+        android:id="@+id/pelicula_item_tag_cast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cast:"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_item_lv_director" />
+
+    <ListView
+        android:id="@+id/pelicula_item_lv_cast"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_item_tag_cast" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

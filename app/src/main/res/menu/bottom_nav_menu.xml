@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/favorites"
+        android:title="@string/favorites_item_title"
+        android:icon="@drawable/baseline_favorite_24"
+        />
+    <item android:id="@+id/search"
+        android:title="@string/search_item_title"
+        android:icon="@drawable/baseline_search_24"
+        />
+    <item android:id="@+id/notifications"
+        android:title="@string/notifications_item_title"
+        android:icon="@drawable/baseline_notifications_none_24"/>
+</menu>
